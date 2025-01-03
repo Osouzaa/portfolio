@@ -6,12 +6,11 @@ import {
   BannerContainer,
   ContentIcons,
   HeaderBanner,
-  ImagePerfil,
   SectionIcons,
-  ShadowImg,
   Subtitle,
   Title,
 } from './styles'
+import { ImagePerfil } from '../img'
 
 export function Banner() {
   return (
@@ -72,13 +71,7 @@ export function Banner() {
           </a>
         </SectionIcons>
       </HeaderBanner>
-      <ImagePerfil>
-        <img
-          src="https://github.com/Osouzaa.png"
-          alt="Foto de perfil de Gabriel Souza Alves dono do porftólioz"
-        />
-        <ShadowImg />
-      </ImagePerfil>
+      <ImagePerfil />
     </BannerContainer>
   )
 }
