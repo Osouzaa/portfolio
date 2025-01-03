@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import { Menu, MoonStar, Sun, X } from 'lucide-react'
+import { IoMenuSharp } from 'react-icons/io5'
+import { MdDarkMode } from 'react-icons/md'
+import { FaSun } from 'react-icons/fa'
+import { IoMdClose } from 'react-icons/io'
 import {
   ContainerButton,
   HeaderContainer,
@@ -43,9 +46,9 @@ export function Header({ handleTheme, theme }: HeaderProps) {
             aria-label="Alternar entre tema claro e escuro"
           >
             {theme === 'dark' ? (
-              <MoonStar size={24} color="#fff" />
+              <MdDarkMode size={24} color="#fff" />
             ) : (
-              <Sun size={24} />
+              <FaSun size={24} />
             )}
           </button>
           <a
@@ -58,7 +61,7 @@ export function Header({ handleTheme, theme }: HeaderProps) {
         </ContainerButton>
       </NavBar>
       <OpenMenu onClick={toggleMenu}>
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        {isMenuOpen ? <IoMdClose size={24} /> : <IoMenuSharp size={24} />}
       </OpenMenu>
       {isMenuOpen && (
         <MobileMenu>
@@ -76,9 +79,9 @@ export function Header({ handleTheme, theme }: HeaderProps) {
             >
               Mudar Tema
               {theme === 'dark' ? (
-                <MoonStar size={24} color="#fff" />
+                <MdDarkMode size={24} color="#fff" />
               ) : (
-                <Sun size={24} />
+                <FaSun size={24} />
               )}
             </button>
             <a
