@@ -1,35 +1,43 @@
 import { FaGithub } from 'react-icons/fa' // Para o GitHub
 import { SiLinkedin, SiInstagram } from 'react-icons/si' // Para LinkedIn, Twitter e Instagram
 import { LuDot } from 'react-icons/lu'
-import { CiTwitter } from 'react-icons/ci'
+import { CiTwitter, CiLocationOn } from 'react-icons/ci'
+import {
+  BannerContainer,
+  ContentIcons,
+  HeaderBanner,
+  ImagePerfil,
+  SectionIcons,
+  ShadowImg,
+  Subtitle,
+  Title,
+} from './styles'
 
 export function Banner() {
   return (
-    <>
-      <header>
-        <div>
-          <h1>Oi, Eu sou o Gabriel Souza 👋</h1>
-          <h4>
-            Como desenvolvedor full stack especializado em React.js e Node.js,
-            ajudo empresas a criar soluções digitais eficientes, rápidas e
-            acessíveis. Meu foco é entender os desafios do cliente e desenvolver
-            aplicações que atendam às suas necessidades específicas, sempre
-            garantindo uma experiência de usuário excepcional e resultados
-            concretos para o negócio.
-          </h4>
-        </div>
-        <section>
+    <BannerContainer>
+      <HeaderBanner>
+        <Title>Opa, Eu sou o Gabriel Souza 👋</Title>
+        <Subtitle>
+          Como desenvolvedor full stack especializado em React.js e Node.js,
+          ajudo empresas a criar soluções digitais eficientes, rápidas e
+          acessíveis. Meu foco é entender os desafios do cliente e desenvolver
+          aplicações que atendam às suas necessidades específicas, sempre
+          garantindo uma experiência de usuário excepcional e resultados
+          concretos para o negócio.
+        </Subtitle>
+        <ContentIcons>
           <button aria-label="Localização">
-            <FaGithub />
+            <CiLocationOn size={24} />
             MG, Brasil
           </button>
           <button aria-label="Disponibilidade">
-            <LuDot />
+            <LuDot size={24} color="#10b981" />
             Disponível para novos projetos
           </button>
-        </section>
+        </ContentIcons>
 
-        <section>
+        <SectionIcons>
           <a
             href="https://github.com/seu-usuario"
             target="_blank"
@@ -37,7 +45,6 @@ export function Banner() {
             aria-label="Meu GitHub"
           >
             <FaGithub />
-            GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/seu-usuario"
@@ -46,7 +53,6 @@ export function Banner() {
             aria-label="Meu LinkedIn"
           >
             <SiLinkedin />
-            LinkedIn
           </a>
           <a
             href="https://twitter.com/seu-usuario"
@@ -55,7 +61,6 @@ export function Banner() {
             aria-label="Meu Twitter"
           >
             <CiTwitter />
-            Twitter
           </a>
           <a
             href="https://www.instagram.com/seu-usuario"
@@ -64,16 +69,16 @@ export function Banner() {
             aria-label="Meu Instagram"
           >
             <SiInstagram />
-            Instagram
           </a>
-        </section>
-      </header>
-      <main>
-        <figure>
-          <img src="sua-imagem.jpg" alt="Descrição da imagem" />
-          <figcaption>Aqui ficará uma imagem minha</figcaption>
-        </figure>
-      </main>
-    </>
+        </SectionIcons>
+      </HeaderBanner>
+      <ImagePerfil>
+        <img
+          src="https://github.com/Osouzaa.png"
+          alt="Foto de perfil de Gabriel Souza Alves dono do porftólioz"
+        />
+        <ShadowImg />
+      </ImagePerfil>
+    </BannerContainer>
   )
 }
