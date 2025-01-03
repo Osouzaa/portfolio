@@ -18,7 +18,7 @@ export const AboutContainer = styled.div`
     gap: 2rem;
   }
 `
-export const Title = styled.h6`
+export const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
   color: ${(props) => props.theme['gray-900']};
