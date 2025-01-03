@@ -108,6 +108,8 @@ export const MobileMenu = styled.div`
     flex-direction: column;
     position: absolute;
     top: 7rem;
+    z-index: 1000;
+    background-color: ${(props) => props.theme.default};
 
     a {
       background-color: transparent;
