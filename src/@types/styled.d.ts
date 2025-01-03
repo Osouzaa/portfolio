@@ -1,10 +1,8 @@
-/* eslint-disable prettier/prettier */
 import 'styled-components'
-import { defaultTheme } from '../styles/themes/default.ts'
+import type { darkTheme } from './../styles/theme/darkTheme'
 
-type ThemeType = typeof defaultTheme
+type ThemeType = typeof darkTheme
 
 declare module 'styled-components' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   export interface DefaultTheme extends ThemeType { }
 }
