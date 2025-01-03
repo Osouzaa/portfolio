@@ -6,6 +6,7 @@ import { GlobalStyle } from '../styles/global'
 import { Header } from '../components/header'
 import { AppContainer } from './styles'
 import { Banner } from '../components/banner'
+import { About } from '../components/about'
 
 export function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -21,6 +22,7 @@ export function App() {
         <Header handleTheme={handleTheme} theme={theme} />
         <Banner />
       </AppContainer>
+      <About />
     </ThemeProvider>
   )
 }

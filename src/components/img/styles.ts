@@ -10,6 +10,7 @@ export const ImagePerfilContainer = styled.figure`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    order: -1;
   }
 
   @media (max-width: 768px) {

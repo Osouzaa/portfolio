@@ -11,5 +11,6 @@ export const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.default};
     color: ${(props) => props.theme['gray-950']};
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
 `
