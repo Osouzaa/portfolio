@@ -6,6 +6,11 @@ export const BannerContainer = styled.div`
   justify-content: space-between;
   margin-top: 4rem;
   gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Empilhando os itens na versão mobile */
+    align-items: center; /* Centralizando os itens */
+  }
 `
 
 export const HeaderBanner = styled.header`
@@ -14,6 +19,10 @@ export const HeaderBanner = styled.header`
   gap: 0.5rem;
   max-width: 768px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    order: 2;
+  }
 `
 
 export const Title = styled.h1`
@@ -22,7 +31,13 @@ export const Title = styled.h1`
   letter-spacing: -1.2px;
   line-height: 72px;
   color: ${(props) => props.theme['gray-900']};
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 48px;
+  }
 `
+
 export const Subtitle = styled.h2`
   font-size: 1rem;
   font-weight: 400;
@@ -51,6 +66,9 @@ export const ContentIcons = styled.section`
     line-height: 24px;
     text-decoration: none;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `
 
 export const SectionIcons = styled.section`
@@ -66,14 +84,29 @@ export const SectionIcons = styled.section`
 
 export const ImagePerfil = styled.figure`
   position: relative;
-  width: 100%; /* Adicionando para garantir que o container tenha a mesma largura da imagem */
+  width: 100%;
   max-width: 280px;
-  height: auto; /* A altura será ajustada conforme o conteúdo */
+  height: auto;
 
   img {
     width: 100%;
-    height: 100%; /* Garantindo que a imagem ocupe toda a altura do container */
+    height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 75%;
+      height: 100%;
+      border: 8px solid ${(props) => props.theme.default};
+    }
+    order: 1;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `
 
@@ -85,4 +118,10 @@ export const ShadowImg = styled.div`
   height: 100%; /* Ajustando a altura também */
   background-color: ${(props) => props.theme['gray-200']};
   z-index: -1;
+
+  @media (max-width: 768px) {
+    width: 82%; /* Ajustando a largura */
+    top: 10%; /* Colocando a posição no meio verticalmente */
+    left: 9%; /* Colocando a posição no meio horizontalmente */
+  }
 `
