@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
 
   img {
     cursor: pointer;
-    width: 80px;
+    width: 120px;
     object-fit: cover;
   }
 `
