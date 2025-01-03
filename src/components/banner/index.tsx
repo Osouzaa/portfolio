@@ -16,7 +16,12 @@ export function Banner() {
   return (
     <BannerContainer>
       <HeaderBanner>
-        <Title>Opa, Eu sou o Gabriel Souza 👋</Title>
+        <Title>
+          Opa, Eu sou o Gabriel Souza{' '}
+          <span role="img" aria-label="Acenando">
+            👋
+          </span>
+        </Title>
         <Subtitle>
           Como desenvolvedor full stack especializado em React.js e Node.js,
           ajudo empresas a criar soluções digitais eficientes, rápidas e

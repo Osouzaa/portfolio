@@ -1,4 +1,32 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+// Definir a animação wave
+const wave = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`
 
 export const BannerContainer = styled.div`
   display: flex;
@@ -36,6 +64,12 @@ export const Title = styled.h1`
     font-size: 2rem;
     line-height: 48px;
   }
+
+  span {
+    display: inline-block; /* Garante que o elemento seja animável */
+    transform-origin: 70% 70%; /* Ajusta o ponto de origem do movimento */
+    animation: ${wave} 1.5s ease-in-out infinite; /* Animação contínua */
+  }
 `
 
 export const Subtitle = styled.h2`
@@ -66,6 +100,7 @@ export const ContentIcons = styled.section`
     line-height: 24px;
     text-decoration: none;
   }
+
   @media screen and (max-width: 768px) {
     margin-top: 2rem;
   }
