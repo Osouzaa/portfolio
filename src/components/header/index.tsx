@@ -60,7 +60,10 @@ export function Header({ handleTheme, theme }: HeaderProps) {
           </a>
         </ContainerButton>
       </NavBar>
-      <OpenMenu onClick={toggleMenu}>
+      <OpenMenu
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+      >
         {isMenuOpen ? <IoMdClose size={24} /> : <IoMenuSharp size={24} />}
       </OpenMenu>
       {isMenuOpen && (
