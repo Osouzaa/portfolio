@@ -28,6 +28,8 @@ export function Header({ handleTheme, theme }: HeaderProps) {
       <img
         src={theme === 'dark' ? 'logo-gsa-hover.png' : 'logo-gsa.png'}
         alt={`Logo GSA para tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
+        width={120}
+        height={120}
       />
 
       <NavBar>
