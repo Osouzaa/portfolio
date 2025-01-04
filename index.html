@@ -4,29 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/logo-gsa-hover.png" />
+
+  <!-- Preconnect para fontes e outros recursos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Portfólio de Gabriel Souza, desenvolvedor web especializado em projetos front-end e soluções de design para empresas.">
-  <link rel="preload" as="image" href="https://github.com/Osouzaa.png">
-  <link rel="preload" as="image" href="/logo-gsa-hover.png">
+
+  <!-- Preload de fontes críticas -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v3/4a3lF9fAz8f5lQzIcvsW9Mw.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+
+  <!-- CSS crítico inline -->
   <style>
     @font-face {
       font-family: 'Inter';
       src: url('https://fonts.gstatic.com/s/inter/v3/4a3lF9fAz8f5lQzIcvsW9Mw.woff2') format('woff2');
       font-display: swap;
     }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
   </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfólio de Gabriel Souza, desenvolvedor web especializado em projetos front-end e soluções de design para empresas.">
+
+  <!-- Preload das imagens -->
+  <link rel="preload" as="image" href="https://github.com/Osouzaa.png">
+  <link rel="preload" as="image" href="/logo-gsa-hover.png">
+
   <title>Gabriel Souza - Dev</title>
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <!-- Carregar JS de forma assíncrona (não bloqueante) -->
+  <script type="module" src="/src/main.tsx" defer></script>
 </body>
 
 </html>
