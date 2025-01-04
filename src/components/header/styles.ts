@@ -104,10 +104,11 @@ export const MobileMenu = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 7rem;
+    top: 10rem;
     z-index: 1000;
     background-color: ${(props) => props.theme.default};
 
