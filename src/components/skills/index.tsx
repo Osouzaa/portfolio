@@ -1,4 +1,4 @@
-import { SkillsData } from '../../utils/data'
+import { SkillsData } from '../../data/data'
 import { Item, SectionButton, SkillsContainer, SkillsContent } from './styles'
 
 export function Skills() {
@@ -13,7 +13,12 @@ export function Skills() {
 
       <SkillsContent>
         {SkillsData.map((item) => (
-          <Item key={item.label}>
+          <Item
+            key={item.label}
+            className={
+              item.label === 'Github' || item.label === 'Express' ? 'bg' : ''
+            }
+          >
             {item.logo}
             <span>{item.label}</span>
           </Item>

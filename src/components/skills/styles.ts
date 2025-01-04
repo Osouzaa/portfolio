@@ -78,4 +78,10 @@ export const Item = styled.section`
     line-height: 28px;
     font-weight: 400;
   }
+
+  &.bg {
+    svg {
+      color: ${(props) => props.theme['gray-600']};
+    }
+  }
 `

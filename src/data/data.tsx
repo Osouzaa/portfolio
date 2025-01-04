@@ -84,7 +84,7 @@ export const SkillsData: SkillsDataProps[] = [
   },
   {
     label: 'Express',
-    logo: <SiExpress size={64} color="#FFF" />,
+    logo: <SiExpress size={64} />,
   },
   {
     label: 'Git',
@@ -92,7 +92,7 @@ export const SkillsData: SkillsDataProps[] = [
   },
   {
     label: 'GitHub',
-    logo: <SiGithub size={64} color="#FFFF" />,
+    logo: <SiGithub size={64} />,
   },
   {
     label: 'TailwindCSS',
