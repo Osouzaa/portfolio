@@ -6,8 +6,10 @@ export function ImagePerfil() {
       <img
         src="https://github.com/Osouzaa.png"
         alt="Foto de perfil de Gabriel Souza Alves, desenvolvedor e criador deste portfólio"
-        loading="lazy"
+        width="200"
+        height="200"
       />
+
       <ShadowImg />
     </ImagePerfilContainer>
   )
