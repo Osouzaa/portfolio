@@ -41,14 +41,28 @@ export const SectionButton = styled.section`
 
 export const SkillsContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-template-columns: repeat(
+    9,
+    1fr
+  ); /* Exatamente 9 colunas em telas maiores */
   gap: 3rem;
   margin-top: 3rem;
   justify-items: center;
 
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(6, 1fr); /* 6 colunas para telas médias */
+  }
+
   @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas pequenas */
     gap: 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 colunas para telas muito pequenas */
   }
 `
 export const Item = styled.section`
