@@ -27,6 +27,10 @@ export const ImagePerfilContainer = styled.figure`
     align-items: center;
     justify-content: center;
   }
+
+  figcaption {
+    display: none;
+  }
 `
 
 export const ShadowImg = styled.div`
