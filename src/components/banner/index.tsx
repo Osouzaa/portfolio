@@ -1,7 +1,7 @@
 import { FaGithub } from 'react-icons/fa' // Para o GitHub
 import { SiLinkedin, SiInstagram } from 'react-icons/si' // Para LinkedIn, Twitter e Instagram
 import { LuDot } from 'react-icons/lu'
-import { CiTwitter, CiLocationOn } from 'react-icons/ci'
+import { CiLocationOn } from 'react-icons/ci'
 import {
   BannerContainer,
   ContentIcons,
@@ -43,7 +43,7 @@ export function Banner() {
 
         <SectionIcons>
           <a
-            href="https://github.com/seu-usuario"
+            href="https://github.com/Osouzaa"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Meu GitHub"
@@ -51,7 +51,7 @@ export function Banner() {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/seu-usuario"
+            href="https://www.linkedin.com/in/gabrielsouza-dev/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Meu LinkedIn"
@@ -59,15 +59,7 @@ export function Banner() {
             <SiLinkedin />
           </a>
           <a
-            href="https://twitter.com/seu-usuario"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Meu Twitter"
-          >
-            <CiTwitter />
-          </a>
-          <a
-            href="https://www.instagram.com/seu-usuario"
+            href="https://www.instagram.com/_gabriellsouza__/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Meu Instagram"

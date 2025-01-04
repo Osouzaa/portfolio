@@ -5,7 +5,7 @@ export function Skills() {
   return (
     <SkillsContainer>
       <SectionButton>
-        <button>Skills</button>
+        <h2>Minhas Skills</h2>
         <p>
           As habilidades, ferramentas e tecnologias nas quais sou realmente bom:
         </p>
@@ -16,10 +16,14 @@ export function Skills() {
           <Item
             key={item.label}
             className={
-              item.label === 'Github' || item.label === 'Express' ? 'bg' : ''
+              item.label === 'Github' || item.label === 'Express'
+                ? 'highlight-bg'
+                : ''
             }
           >
-            {item.logo}
+            <div role="img" aria-label={`Ícone de ${item.label}`}>
+              {item.logo}
+            </div>
             <span>{item.label}</span>
           </Item>
         ))}

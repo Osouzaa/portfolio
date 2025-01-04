@@ -17,7 +17,7 @@ export const SectionButton = styled.section`
   justify-content: center;
   gap: 1rem;
 
-  button {
+  h2 {
     padding: 0.375rem 1.2rem;
     border-radius: 12px;
     background-color: ${(props) => props.theme['gray-200']};
@@ -79,7 +79,7 @@ export const Item = styled.section`
     font-weight: 400;
   }
 
-  &.bg {
+  &.highlight-bg {
     svg {
       color: ${(props) => props.theme['gray-600']};
     }
