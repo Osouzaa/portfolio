@@ -16,7 +16,6 @@ interface HeaderProps {
   handleTheme: () => void
   theme: string
 }
-
 export function Header({ handleTheme, theme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -43,7 +42,7 @@ export function Header({ handleTheme, theme }: HeaderProps) {
         <ContainerButton role="group" aria-label="Ações do usuário">
           <button
             onClick={handleTheme}
-            aria-label="Alternar entre tema claro e escuro"
+            aria-label={`Alternar para o tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
           >
             {theme === 'dark' ? (
               <MdDarkMode size={24} color="#fff" />
@@ -60,12 +59,14 @@ export function Header({ handleTheme, theme }: HeaderProps) {
           </a>
         </ContainerButton>
       </NavBar>
+
       <OpenMenu
         onClick={toggleMenu}
         aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
       >
         {isMenuOpen ? <IoMdClose size={24} /> : <IoMenuSharp size={24} />}
       </OpenMenu>
+
       {isMenuOpen && (
         <MobileMenu>
           <Diviser>
@@ -78,7 +79,7 @@ export function Header({ handleTheme, theme }: HeaderProps) {
           <ContainerButton role="group" aria-label="Ações do usuário">
             <button
               onClick={handleTheme}
-              aria-label="Alternar entre tema claro e escuro"
+              aria-label={`Alternar para o tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
             >
               Mudar Tema
               {theme === 'dark' ? (
