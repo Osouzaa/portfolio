@@ -25,10 +25,12 @@ export function Banner() {
         <Subtitle>
           Como desenvolvedor full stack especializado em React.js e Node.js,
           ajudo empresas a criar soluções digitais eficientes, rápidas e
-          acessíveis. Meu foco é entender os desafios do cliente e desenvolver
-          aplicações que atendam às suas necessidades específicas, sempre
-          garantindo uma experiência de usuário excepcional e resultados
-          concretos para o negócio.
+          acessíveis. Com experiência no desenvolvimento de sistemas voltados
+          para RH e Departamento Pessoal, foco em resolver desafios específicos
+          dessas áreas, criando aplicações que otimizam processos, melhoram a
+          gestão de pessoas e promovem resultados concretos para os negócios.
+          Meu compromisso é entregar soluções com excelente experiência de
+          usuário e alto impacto estratégico.
         </Subtitle>
         <ContentIcons>
           <button aria-label="Localização">
