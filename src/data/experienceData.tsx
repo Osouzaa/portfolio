@@ -1,4 +1,4 @@
-import LogoTecBranca from '../assets/logo-tecnocar-branca.png'
+import LogoTecBranca from '../assets/tecnocarengenharia_logo.jpg'
 import logoIzap from '../assets/logo izap.jpg'
 import logoStellantis from '../assets/stellantis_logo.jpg'
 

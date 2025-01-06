@@ -12,6 +12,10 @@ export const ExperienceContainer = styled.div`
   width: 100vw;
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
 `
 
 export const SectionButton = styled.section`
@@ -56,7 +60,7 @@ export const CardExperience = styled.section`
   gap: 3rem;
 
   img {
-    max-width: 150px;
+    max-width: 120px;
     object-fit: contain;
   }
 
@@ -65,6 +69,12 @@ export const CardExperience = styled.section`
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `
 
