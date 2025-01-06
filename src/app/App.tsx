@@ -9,6 +9,7 @@ import { Banner } from '../components/banner'
 import { About } from '../components/about'
 import { Skills } from '../components/skills'
 import { Experience } from '../components/experience'
+import { Work } from '../components/work'
 
 export function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -27,6 +28,7 @@ export function App() {
       <About />
       <Skills />
       <Experience />
+      <Work />
     </ThemeProvider>
   )
 }
