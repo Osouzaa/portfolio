@@ -1,4 +1,4 @@
-import { SkillsData } from '../../data/data'
+import { SkillsData } from '../../data/skillsData'
 import { Item, SectionButton, SkillsContainer, SkillsContent } from './styles'
 
 export function Skills() {

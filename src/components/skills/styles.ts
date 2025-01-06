@@ -46,7 +46,7 @@ export const SkillsContent = styled.div`
     1fr
   ); /* Exatamente 9 colunas em telas maiores */
   gap: 3rem;
-  margin-top: 3rem;
+  margin: 3rem 0;
   justify-items: center;
 
   @media screen and (max-width: 1024px) {
