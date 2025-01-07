@@ -12,6 +12,7 @@ import { Experience } from '../components/experience'
 import { Work } from '../components/work'
 import { Footer } from '../components/footer'
 import { Form } from '../components/form'
+import { Toaster } from 'sonner'
 
 export function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -23,6 +24,7 @@ export function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
+      <Toaster richColors />
       <AppContainer>
         <Header handleTheme={handleTheme} theme={theme} />
         <Banner />

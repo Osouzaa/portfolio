@@ -114,8 +114,13 @@ export const ButtonSubmit = styled.button`
   cursor: pointer;
   margin: 2rem 0 4rem 0;
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: ${(props) => props.theme['gray-300']};
     transition: background-color 0.2s ease-in-out;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `
