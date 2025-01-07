@@ -149,3 +149,21 @@ export const SectionSkills = styled.section`
     }
   }
 `
+
+export const LinkProject = styled.a`
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+  color: ${(props) => props.theme['gray-600']};
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.2s ease-in-out;
+  }
+`

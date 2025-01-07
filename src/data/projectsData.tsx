@@ -2,6 +2,7 @@ import siteTecnocar from '../assets/site-tecnocar.jpg'
 import DevCurrency from '../assets/CriptMoeda.png'
 import Gerenciador from '../assets/Gerenciador de Tarefas.png'
 import PrimeFlix from '../assets/PrimeFlix.png'
+import ChatBot from '../assets/ChatBot.jpg'
 
 interface ProjectDataProps {
   image: string
@@ -9,6 +10,7 @@ interface ProjectDataProps {
   date: string
   description: string
   technologies: string[]
+  link: string
 }
 
 export const projectData: ProjectDataProps[] = [
@@ -27,7 +29,28 @@ export const projectData: ProjectDataProps[] = [
       'EmailJs',
       'Jest',
       'Vercel',
+      'AzureWebStatic',
     ],
+    link: 'http://www.tecnocarengenharia.com.br/',
+  },
+  {
+    image: ChatBot,
+    title: 'ChatBot',
+    date: 'Set 2023 - Nov 2023',
+    description:
+      'Desenvolvi uma landing page interativa com integração de ChatBot para otimizar a comunicação entre clientes e vendedores em uma loja de carros. O objetivo principal do projeto foi aprimorar o atendimento ao cliente, tornando-o mais rápido e eficiente para os vendedores. A plataforma foi projetada com foco na simplicidade, proporcionando uma navegação intuitiva e um design moderno, que facilita a interação dos usuários. O desenvolvimento foi realizado com práticas recomendadas de código, com uma arquitetura full stack robusta, incluindo a integração com APIs externas para funcionalidades adicionais. O sistema foi implementado utilizando tecnologias como TypeScript, React, e NodeJs, e hospedado de forma eficiente na plataforma Vercel.',
+    technologies: [
+      'TypeScript',
+      'React',
+      'Styled-components',
+      'Figma',
+      'Vercel',
+      'NodeJs',
+      'NestJs',
+      'TypeOrm',
+      'PostgreSQL',
+    ],
+    link: 'https://front-chat-eight.vercel.app/',
   },
   {
     image: DevCurrency,
@@ -36,6 +59,7 @@ export const projectData: ProjectDataProps[] = [
     description:
       'Desenvolvimento do DevCurrency, um site que consome a API do CoinGecko para exibir valores atualizados de criptomoedas em tempo real. O objetivo foi oferecer uma plataforma intuitiva e eficiente, com um design moderno que facilita a navegação dos usuários. Este projeto foi criado como parte de um curso ministrado por Matheus Fraga, com foco em boas práticas de desenvolvimento e integração com APIs externas.',
     technologies: ['TypeScript', 'React', 'Tailwind', 'Figma', 'Vercel'],
+    link: 'https://cripto-app-pi.vercel.app/',
   },
   {
     image: Gerenciador,
@@ -44,6 +68,7 @@ export const projectData: ProjectDataProps[] = [
     description:
       'Projeto de um Gerenciador de Tarefas desenvolvido com HTML, CSS e JavaScript, projetado para organizar e exibir tarefas de forma clara e eficiente. O sistema categoriza tarefas em pendentes, bloqueadas e concluídas, oferecendo aos usuários uma ferramenta prática para acompanhar suas atividades diárias. O foco foi criar uma solução responsiva e alinhada às melhores práticas de desenvolvimento front-end.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    link: 'https://gerenciador-tarefas-three.vercel.app/',
   },
   {
     image: PrimeFlix,
@@ -52,5 +77,6 @@ export const projectData: ProjectDataProps[] = [
     description:
       'Criação do PrimeFlix, uma plataforma que utiliza a API MovieDB para exibir os filmes mais populares em tempo real. A aplicação inclui funcionalidades como visualização de trailers, salvamento de filmes em favoritos e interface simplificada. O projeto foi desenvolvido com foco em responsividade, experiência do usuário e boas práticas de desenvolvimento front-end, utilizando ferramentas modernas.',
     technologies: ['React.js', 'TailwindCSS', 'Vercel'],
+    link: 'https://prime-flix-gold.vercel.app/',
   },
 ]

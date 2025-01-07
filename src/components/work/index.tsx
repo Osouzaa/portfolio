@@ -4,12 +4,14 @@ import {
   ContainerWork,
   ContentImage,
   Description,
+  LinkProject,
   SectionButton,
   SectionSkills,
   Title,
   WorkContainer,
   WorkContent,
 } from './style'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 export function Work() {
   return (
@@ -34,6 +36,10 @@ export function Work() {
                   <p key={idx}>{tech}</p>
                 ))}
               </SectionSkills>
+
+              <LinkProject href={project.link} aria-label="Link para o projeto">
+                <FaExternalLinkAlt size={16} />
+              </LinkProject>
             </ContainerSectionDescriptionProject>
           </ContainerWork>
         ))}
