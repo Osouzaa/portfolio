@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme } from '../styles/theme/darkTheme'
 import { lightTheme } from '../styles/theme/lightTheme'
@@ -17,23 +17,54 @@ import { Toaster } from 'sonner'
 export function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
 
+  // Criando referências para cada seção
+  const homeRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const skillsRef = useRef<HTMLDivElement>(null)
+  const experienceRef = useRef<HTMLDivElement>(null)
+  const workRef = useRef<HTMLDivElement>(null)
+  const formRef = useRef<HTMLDivElement>(null)
+
   const currentTheme = theme === 'dark' ? darkTheme : lightTheme
+
   const handleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
+
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
       <Toaster richColors />
-      <AppContainer>
-        <Header handleTheme={handleTheme} theme={theme} />
+      <AppContainer ref={homeRef}>
+        <Header
+          handleTheme={handleTheme}
+          theme={theme}
+          refs={{
+            home: homeRef,
+            about: aboutRef,
+            skills: skillsRef,
+            experience: experienceRef,
+            work: workRef,
+            form: formRef,
+          }}
+        />
         <Banner />
       </AppContainer>
-      <About />
-      <Skills />
-      <Experience />
-      <Work />
-      <Form />
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={skillsRef}>
+        <Skills />
+      </div>
+      <div ref={experienceRef}>
+        <Experience />
+      </div>
+      <div ref={workRef}>
+        <Work />
+      </div>
+      <div ref={formRef}>
+        <Form />
+      </div>
       <Footer />
     </ThemeProvider>
   )

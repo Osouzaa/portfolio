@@ -15,12 +15,26 @@ import {
 interface HeaderProps {
   handleTheme: () => void
   theme: string
+  refs: {
+    home: React.RefObject<HTMLDivElement>
+    about: React.RefObject<HTMLDivElement>
+    skills: React.RefObject<HTMLDivElement>
+    experience: React.RefObject<HTMLDivElement>
+    work: React.RefObject<HTMLDivElement>
+    form: React.RefObject<HTMLDivElement>
+  }
 }
-export function Header({ handleTheme, theme }: HeaderProps) {
+
+export function Header({ handleTheme, theme, refs }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setIsMenuOpen(false) // Fecha o menu ao clicar
+    }
   }
 
   return (
@@ -34,11 +48,16 @@ export function Header({ handleTheme, theme }: HeaderProps) {
 
       <NavBar>
         <nav aria-label="Menu principal">
-          <a href="#home" aria-current="page">
-            Página Inicial
-          </a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato">Contato</a>
+          <button onClick={() => scrollToSection(refs.home)}>Início</button>
+          <button onClick={() => scrollToSection(refs.about)}>Sobre Mim</button>
+          <button onClick={() => scrollToSection(refs.skills)}>
+            Habilidades
+          </button>
+          <button onClick={() => scrollToSection(refs.experience)}>
+            Experiências
+          </button>
+          <button onClick={() => scrollToSection(refs.work)}>Projetos</button>
+          <button onClick={() => scrollToSection(refs.form)}>Contato</button>
         </nav>
         <Diviser />
         <ContainerButton role="group" aria-label="Ações do usuário">
@@ -57,7 +76,7 @@ export function Header({ handleTheme, theme }: HeaderProps) {
             download="Meu-CV.pdf"
             aria-label="Baixar Currículo em PDF"
           >
-            Download CV
+            Baixar CV
           </a>
         </ContainerButton>
       </NavBar>
@@ -72,18 +91,25 @@ export function Header({ handleTheme, theme }: HeaderProps) {
       {isMenuOpen && (
         <MobileMenu>
           <Diviser>
-            <a href="#home" aria-current="page">
-              Página Inicial
-            </a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
+            <button onClick={() => scrollToSection(refs.home)}>Início</button>
+            <button onClick={() => scrollToSection(refs.about)}>
+              Sobre Mim
+            </button>
+            <button onClick={() => scrollToSection(refs.skills)}>
+              Habilidades
+            </button>
+            <button onClick={() => scrollToSection(refs.experience)}>
+              Experiências
+            </button>
+            <button onClick={() => scrollToSection(refs.work)}>Projetos</button>
+            <button onClick={() => scrollToSection(refs.form)}>Contato</button>
           </Diviser>
           <ContainerButton role="group" aria-label="Ações do usuário">
             <button
               onClick={handleTheme}
               aria-label={`Alternar para o tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
             >
-              Mudar Tema
+              Mudar de thema
               {theme === 'dark' ? (
                 <MdDarkMode size={24} color="#fff" />
               ) : (
@@ -91,11 +117,11 @@ export function Header({ handleTheme, theme }: HeaderProps) {
               )}
             </button>
             <a
-              href="/path/to/cv.pdf"
-              download="Meu-CV.pdf"
+              href="/public/Profile.pdf"
+              download="Curriculo desenvolvedor Gabriel Souza.pdf"
               aria-label="Baixar Currículo em PDF"
             >
-              Download CV
+              Baixar CV
             </a>
           </ContainerButton>
         </MobileMenu>

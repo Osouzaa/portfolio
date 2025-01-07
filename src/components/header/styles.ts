@@ -23,12 +23,14 @@ export const NavBar = styled.div`
     display: flex;
     gap: 1.5rem;
 
-    a {
+    button {
       text-decoration: none;
       font-weight: 500;
       color: ${(props) => props.theme['gray-600']};
       font-size: 1rem;
       line-height: 24px;
+      background-color: transparent;
+      border: none;
     }
   }
 
@@ -112,8 +114,9 @@ export const MobileMenu = styled.div`
     z-index: 1000;
     background-color: ${(props) => props.theme.default};
 
-    a {
+    button {
       background-color: transparent;
+      border: 0;
       color: ${(props) => props.theme['gray-600']};
       padding: 0.375rem 1rem;
       border-radius: 12px;
