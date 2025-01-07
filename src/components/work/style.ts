@@ -93,7 +93,7 @@ export const ContentImage = styled.div`
     max-width: 100%;
     border-radius: 12px;
     img {
-      max-width: 280px;
+      max-width: 100%;
       height: auto;
       object-fit: contain;
     }

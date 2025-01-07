@@ -29,4 +29,29 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
+
+  /* Estilizando o scroll */
+  &::-webkit-scrollbar {
+    scrollbar-width: thin; /* Para navegadores compatíveis com CSS padrão */
+    scrollbar-color: ${(props) => props.theme['gray-900']} ${(props) => props.theme['gray-100']};
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${(props) => props.theme['gray-100']}; /* Fundo da barra */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme['gray-400']}; /* Cor do polegar */
+    border-radius: 10px;
+    border: 3px solid ${(props) => props.theme['gray-100']}; /* Espaço entre o polegar e o fundo */
+  }
+
+ &::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => props.theme['gray-500']}; /* Cor ao passar o mouse */
+  }
 `
