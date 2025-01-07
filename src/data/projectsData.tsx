@@ -38,7 +38,7 @@ export const projectData: ProjectDataProps[] = [
     title: 'ChatBot',
     date: 'Set 2023 - Nov 2023',
     description:
-      'Desenvolvi uma landing page interativa com integração de ChatBot para otimizar a comunicação entre clientes e vendedores em uma loja de carros. O objetivo principal do projeto foi aprimorar o atendimento ao cliente, tornando-o mais rápido e eficiente para os vendedores. A plataforma foi projetada com foco na simplicidade, proporcionando uma navegação intuitiva e um design moderno, que facilita a interação dos usuários. O desenvolvimento foi realizado com práticas recomendadas de código, com uma arquitetura full stack robusta, incluindo a integração com APIs externas para funcionalidades adicionais. O sistema foi implementado utilizando tecnologias como TypeScript, React, e NodeJs, e hospedado de forma eficiente na plataforma Vercel.',
+      'Desenvolvi uma landing page com ChatBot para melhorar a comunicação entre clientes e vendedores de uma loja de carros. O projeto focou em aprimorar o atendimento ao cliente e facilitar o trabalho dos vendedores, com um design moderno e navegação intuitiva. Implementado com uma arquitetura full stack e integração com APIs externas, seguiu boas práticas de desenvolvimento.',
     technologies: [
       'TypeScript',
       'React',

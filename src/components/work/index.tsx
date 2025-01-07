@@ -37,7 +37,11 @@ export function Work() {
                 ))}
               </SectionSkills>
 
-              <LinkProject href={project.link} aria-label="Link para o projeto">
+              <LinkProject
+                href={project.link}
+                aria-label="Link para o projeto"
+                target="_blank"
+              >
                 <FaExternalLinkAlt size={16} />
               </LinkProject>
             </ContainerSectionDescriptionProject>

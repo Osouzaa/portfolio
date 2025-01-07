@@ -62,7 +62,7 @@ export const ContainerWork = styled.section`
   border-radius: 12px;
 
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
 
   @media screen and (max-width: 768px) {
@@ -72,10 +72,13 @@ export const ContainerWork = styled.section`
 `
 
 export const ContentImage = styled.div`
+  flex: 1; /* Faz o componente ocupar o espaço disponível */
   max-width: 50%;
   background-color: ${(props) => props.theme['gray-200']};
   border-radius: 12px 0 0 12px;
   padding: 3rem;
+  height: 100%;
+
   img {
     max-width: 480px;
     height: 384px;
