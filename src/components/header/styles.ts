@@ -31,6 +31,7 @@ export const NavBar = styled.div`
       line-height: 24px;
       background-color: transparent;
       border: none;
+      cursor: pointer;
     }
   }
 
