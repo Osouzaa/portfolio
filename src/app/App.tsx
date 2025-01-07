@@ -10,6 +10,8 @@ import { About } from '../components/about'
 import { Skills } from '../components/skills'
 import { Experience } from '../components/experience'
 import { Work } from '../components/work'
+import { Footer } from '../components/footer'
+import { Form } from '../components/form'
 
 export function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -29,6 +31,8 @@ export function App() {
       <Skills />
       <Experience />
       <Work />
+      <Form />
+      <Footer />
     </ThemeProvider>
   )
 }
