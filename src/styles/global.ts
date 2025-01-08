@@ -29,26 +29,24 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
-
-  /* Estilizando o scroll */
   &::-webkit-scrollbar {
-    scrollbar-width: thin; /* Para navegadores compatíveis com CSS padrão */
+    scrollbar-width: thin; 
     scrollbar-color: ${(props) => props.theme['gray-900']} ${(props) => props.theme['gray-100']};
   }
 
   &::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
+    width: 12px;
   }
 
   &::-webkit-scrollbar-track {
-    background: ${(props) => props.theme['gray-100']}; /* Fundo da barra */
+    background: ${(props) => props.theme['gray-100']}; 
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme['gray-400']}; /* Cor do polegar */
+    background: ${(props) => props.theme['gray-400']}; 
     border-radius: 10px;
-    border: 3px solid ${(props) => props.theme['gray-100']}; /* Espaço entre o polegar e o fundo */
+    border: 3px solid ${(props) => props.theme['gray-100']}; 
   }
 
  &::-webkit-scrollbar-thumb:hover {
