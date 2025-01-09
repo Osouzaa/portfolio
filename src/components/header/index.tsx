@@ -72,11 +72,11 @@ export function Header({ handleTheme, theme, refs }: HeaderProps) {
             )}
           </button>
           <a
-            href="/path/to/cv.pdf"
-            download="Meu-CV.pdf"
+            href="/public/Profile.pdf"
+            download="Curriculo-Gabriel Souza Dev.pdf"
             aria-label="Baixar Currículo em PDF"
           >
-            Baixar CV
+            Baixar Currículo
           </a>
         </ContainerButton>
       </NavBar>
@@ -118,10 +118,10 @@ export function Header({ handleTheme, theme, refs }: HeaderProps) {
             </button>
             <a
               href="/public/Profile.pdf"
-              download="Curriculo desenvolvedor Gabriel Souza.pdf"
+              download="Curriculo-Gabriel Souza Dev.pdf"
               aria-label="Baixar Currículo em PDF"
             >
-              Baixar CV
+              Baixar Currículo
             </a>
           </ContainerButton>
         </MobileMenu>
