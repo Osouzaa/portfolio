@@ -41,6 +41,7 @@ export function Work() {
                 href={project.link}
                 aria-label="Link para o projeto"
                 target="_blank"
+                title="Link para o projeto"
               >
                 <FaExternalLinkAlt size={16} />
               </LinkProject>

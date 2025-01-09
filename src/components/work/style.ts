@@ -77,7 +77,6 @@ export const ContentImage = styled.div`
   background-color: ${(props) => props.theme['gray-200']};
   border-radius: 12px 0 0 12px;
   padding: 3rem;
-  height: 100%;
 
   img {
     max-width: 480px;
@@ -96,6 +95,12 @@ export const ContentImage = styled.div`
       max-width: 100%;
       height: auto;
       object-fit: contain;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1100px) {
+    img {
+      max-width: 250px;
     }
   }
 `

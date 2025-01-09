@@ -33,10 +33,10 @@ export function Form() {
     setIsLoading(true) // Ativa o estado de loading
     try {
       await emailjs.send(
-        'service_mz1mase',
-        'template_wpbtq0n',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         data,
-        '_Gf5uk9FL3ekgD7Q3',
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       toast.success('Email enviado com sucesso! Agradecemos pelo contato.', {
         style: {
@@ -44,11 +44,11 @@ export function Form() {
         },
         position: 'top-right',
       })
-      reset() // Reseta o formulário após o envio bem-sucedido
+      reset()
     } catch (error) {
       toast.error('Erro ao enviar o email. Tente novamente mais tarde.')
     } finally {
-      setIsLoading(false) // Desativa o estado de loading
+      setIsLoading(false)
     }
   }
 
