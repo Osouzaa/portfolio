@@ -46,6 +46,7 @@ export function Form() {
       })
       reset()
     } catch (error) {
+      console.log(error)
       toast.error('Erro ao enviar o email. Tente novamente mais tarde.')
     } finally {
       setIsLoading(false)
